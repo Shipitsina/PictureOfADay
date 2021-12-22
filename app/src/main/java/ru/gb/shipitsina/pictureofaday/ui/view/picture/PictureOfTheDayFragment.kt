@@ -168,7 +168,7 @@ class PictureOfTheDayFragment : Fragment() {
      */
     private fun setBottomSheetBehavior(bottomSheet: ConstraintLayout) {
         val bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet)
-        bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
+        bottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
     }
 
     private fun Fragment.toast(string: String?) {

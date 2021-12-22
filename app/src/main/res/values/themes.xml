@@ -14,6 +14,30 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="MoonStyle" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name = "background">@drawable/earth_from_moon_portrait</item>
+    </style>
+
+    <style name="softnessStyle" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="backgroundColor">@color/colorSoftnessBackGround</item>
+        <item name="android:colorPrimary">@color/colorPrimarySoft</item>
+        <item name="colorOnPrimary">@color/colorOnPrimarySoft</item>
+        <item name="fontFamily">@font/elsie_swash_caps</item>
+    </style>
+
+    <style name="hardnessStyle" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="backgroundColor">@color/colorHardnessBackGround</item>
+        <item name="android:colorPrimary">@color/colorPrimaryHard</item>
+        <item name="colorOnPrimary">@color/colorOnPrimaryHard</item>
+        <item name="fontFamily">@font/metal_mania</item>
+    </style>
+
     <style name="Theme.PictureOfADay.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

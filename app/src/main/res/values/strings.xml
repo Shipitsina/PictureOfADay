@@ -18,4 +18,10 @@
     <string name="search_wiki">Найти в Википедии</string>
     <string name="wiki_helper_text">Поищите термин в википедии</string>
 
+    <string name="header_settings">Настройки приложения</string>
+    <string name="choose_theme">Выбор темы:</string>
+    <string name="standart_theme_text">Стандартная</string>
+    <string name="softness_theme_text">Нежность</string>
+    <string name="hardness_theme_text">Металл</string>
+
 </resources>
