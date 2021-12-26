@@ -2,8 +2,7 @@ package ru.gb.shipitsina.pictureofaday
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import ru.gb.shipitsina.pictureofaday.ui.view.PictureOfTheDayFragment
-import ru.gb.shipitsina.pictureofaday.R
+import ru.gb.shipitsina.pictureofaday.ui.view.picture.PictureOfTheDayFragment
 
 
 class MainActivity : AppCompatActivity() {

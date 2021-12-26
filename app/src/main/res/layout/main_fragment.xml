@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    >
+    <!--фрагмент PictureOfTheDayFragment. Умеет отображать картинку EquilateralImageView-->
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -11,7 +13,6 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingStart="10dp"
@@ -36,10 +37,10 @@
                 app:endIconDrawable="@drawable/ic_wikipedia"
                 app:endIconMode="custom"
                 app:helperText="@string/wiki_helper_text"
+                app:layout_constraintBottom_toBottomOf="@+id/guidelineChips"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/guidelineTextInput"
-                app:layout_constraintBottom_toBottomOf="@+id/guidelineChips">
+                app:layout_constraintTop_toTopOf="@+id/guidelineTextInput">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/input_edit_text"
@@ -54,17 +55,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_begin="100dp"/>
+                app:layout_constraintGuide_begin="100dp" />
 
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/chipsDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:chipSpacingHorizontal="25dp"
+                app:layout_constraintBottom_toBottomOf="@+id/guidelinePicture"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/guidelineChips"
-                app:layout_constraintBottom_toBottomOf="@+id/guidelinePicture"
                 app:singleLine="true">
 
                 <com.google.android.material.chip.Chip
@@ -123,5 +124,7 @@
         app:layout_anchor="@id/bottom_app_bar"
         app:srcCompat="@drawable/ic_plus_fab"
         app:tint="#FFFFFF" />
+
+    <include android:id="@+id/includeBottomSheet" layout="@layout/bottom_sheet_layout" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

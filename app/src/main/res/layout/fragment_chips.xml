@@ -11,6 +11,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/header_settings"
+            android:textSize="@dimen/header_text_size"/>
+
         <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -98,8 +105,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="Choose One"
-        android:textSize="18sp" />
+        android:text="@string/choose_theme"
+        android:textSize="@dimen/sub_header_text_size" />
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/chipGroup"
@@ -108,22 +115,31 @@
         app:singleSelection="true">
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/standart_theme"
             style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choice A" />
+            android:fontFamily="sans-serif"
+            app:chipBackgroundColor="@color/standartChipBackgr"
+            android:text="@string/standart_theme_text" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/softness_theme"
             style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choice B" />
+            app:chipBackgroundColor="@color/colorSoftnessBackGround"
+            android:text="@string/softness_theme_text"
+            android:fontFamily="@font/elsie_swash_caps"/>
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/hardness_theme"
             style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choice C" />
+            app:chipBackgroundColor="@color/colorHardnessBackGround"
+            android:text="@string/hardness_theme_text"
+            android:fontFamily="@font/metal_mania"/>
     </com.google.android.material.chip.ChipGroup>
 
     <HorizontalScrollView
