@@ -1,8 +1,7 @@
 package ru.gb.shipitsina.pictureofaday.ui.view
 
-import android.os.Build
+import android.content.Context
 import android.os.Bundle
-import android.view.ContextThemeWrapper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,9 +12,16 @@ import kotlinx.android.synthetic.main.fragment_chips.*
 import ru.gb.shipitsina.pictureofaday.MainActivity
 import ru.gb.shipitsina.pictureofaday.R
 import ru.gb.shipitsina.pictureofaday.databinding.FragmentChipsBinding
+import ru.gb.shipitsina.pictureofaday.ui.model.Parameters
 
 
 class ChipsFragment : Fragment() {
+
+    private lateinit var parentActivity: MainActivity
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        parentActivity = (context as MainActivity)
+    }
 
     private var _binding: FragmentChipsBinding? = null
     val binding: FragmentChipsBinding
@@ -37,19 +43,25 @@ class ChipsFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        fun setNewTheme(themeToChange: Int) {
+            if (Parameters.getInstance().theme != themeToChange){
+                Parameters.getInstance().theme = themeToChange
+                parentActivity.setTheme(themeToChange)
+                parentActivity.recreate()
+            }
+        }
+
         super.onViewCreated(view, savedInstanceState)
-        //val themedContext = ContextThemeWrapper(context?.applicationContext?.setTheme(context.theme.setTo(resources.newTheme())), R.style)
         chipGroup.setOnCheckedChangeListener { chipGroup, position ->
             chipGroup.findViewById<Chip>(position)?.let {
                 if (it.id == R.id.standart_theme){
-                    activity?.setTheme(R.style.Theme_PictureOfADay)
-                    Toast.makeText(context, it.id.toString(), Toast.LENGTH_SHORT).show()
+                    setNewTheme(R.style.Theme_PictureOfADay)
                 } else if (it.id == R.id.softness_theme){
-                    activity?.setTheme(R.style.softnessStyle)
-                } else if (it.id == R.id.hardness_theme){
-                    context?.setTheme(R.style.hardnessStyle)
+                    setNewTheme(R.style.softnessStyle)
+                } else if (it.id == R.id.hardness_theme) {
+                    setNewTheme(R.style.hardnessStyle)
                 }
-                //Toast.makeText(context, it.id.toString(), Toast.LENGTH_SHORT).show()
             }
         }
 

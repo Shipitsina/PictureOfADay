@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.PictureOfADay" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.PictureOfADay" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -14,22 +14,26 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="MoonStyle" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="MoonStyle" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name = "background">@drawable/earth_from_moon_portrait</item>
     </style>
 
-    <style name="softnessStyle" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="softnessStyle" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="backgroundColor">@color/colorSoftnessBackGround</item>
         <item name="android:colorPrimary">@color/colorPrimarySoft</item>
         <item name="colorOnPrimary">@color/colorOnPrimarySoft</item>
         <item name="fontFamily">@font/elsie_swash_caps</item>
+        <item name="colorPrimary">@color/colorPrimarySoft</item>
+        <item name="backgroundTint">@color/colorOnPrimarySoft</item>
+        <item name="colorPrimaryDark">@color/colorPrimarySoft</item>
+        <item name="colorSurface">@color/colorPrimarySoft</item>
     </style>
 
-    <style name="hardnessStyle" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="hardnessStyle" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="backgroundColor">@color/colorHardnessBackGround</item>
@@ -44,6 +48,9 @@
     </style>
 
     <style name="Theme.PictureOfADay.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="ThemeOverlay.BottomAppBar" parent="ThemeOverlay.MaterialComponents.BottomAppBar.Primary">
+        <item name="colorOnPrimary">@color/color_gray</item>
+    </style>
 
     <style name="Theme.PictureOfADay.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
