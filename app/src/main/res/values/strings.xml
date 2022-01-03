@@ -23,5 +23,8 @@
     <string name="standart_theme_text">Стандартная</string>
     <string name="softness_theme_text">Нежность</string>
     <string name="hardness_theme_text">Металл</string>
+    <string name="mars">Mars</string>
+    <string name="earth">Earth</string>
+    <string name="system">System</string>
 
 </resources>

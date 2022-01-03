@@ -9,11 +9,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/ic_mars"
-        android:drawablePadding="10dp"
+        android:drawablePadding="@dimen/tabItemDrawablePadding"
         android:gravity="center_vertical"
-        android:text="Mars"
+        android:text="@string/mars"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="20sp"
+        android:textSize="@dimen/tabItemTextSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

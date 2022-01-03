@@ -7,4 +7,6 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="header_text_size">30sp</dimen>
     <dimen name="sub_header_text_size">18sp</dimen>
+    <dimen name="tabItemTextSize">20sp</dimen>
+    <dimen name="tabItemDrawablePadding">10dp</dimen>
 </resources>

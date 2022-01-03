@@ -15,11 +15,18 @@
             android:label="@string/app_name"
             android:theme="@style/Theme.PictureOfADay.NoActionBar"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.view.api.ApiActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.PictureOfADay.NoActionBar"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".ui.view.api.ApiBottomActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.PictureOfADay.NoActionBar"
+            android:exported="true">
         </activity>
         <meta-data
             android:name="preloaded_fonts"
